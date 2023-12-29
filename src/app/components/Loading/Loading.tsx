@@ -1,8 +1,8 @@
 "use client";
 
 const Loading = ({}) => {
-    return (
-      <div className="justify-center">
+  return (
+    <div className="justify-center">
       <button type="button" className="bg-indigo-500 ..." disabled>
         <svg
           className="animate-spin h-5 w-5 mr-3 ..."
@@ -10,9 +10,8 @@ const Loading = ({}) => {
         ></svg>
         Processing...
       </button>
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
-
-  export  default Loading;
+export default Loading;

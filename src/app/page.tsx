@@ -13,6 +13,7 @@ export default function Home() {
   if (isLoading) return <Loading />;
   if (isError) return <div>Sorry There was an Error</div>;
 
+  console.log("render", data)
   return (
     <div className="container mx-auto">
       <h1 className="p-5 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-center font-bold text-4xl">
