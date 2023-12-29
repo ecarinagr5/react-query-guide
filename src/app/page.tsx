@@ -2,6 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Card from "./components/Card/Card";
 import getMovies from "./api/getMovies";
+import Loading from "./components/Loading/Loading";
 
 export default function Home() {
   const { data, isLoading, isError } = useQuery({
@@ -9,23 +10,14 @@ export default function Home() {
     queryKey: ["movies"], //Array according to Documentation
   });
 
-  const loading = () => {
-    return (
-      <button type="button" className="bg-indigo-500 ..." disabled>
-        <svg
-          className="animate-spin h-5 w-5 mr-3 ..."
-          viewBox="0 0 24 24"
-        ></svg>
-        Processing...
-      </button>
-    );
-  };
-  if (isLoading) return loading();
+  if (isLoading) return <Loading />;
   if (isError) return <div>Sorry There was an Error</div>;
 
   return (
     <div className="container mx-auto">
-      <h1 className="p-5 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-center font-bold">React Query Movies</h1>
+      <h1 className="p-5 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-center font-bold text-4xl">
+        React Query Movies
+      </h1>
       <div className="grid grid-cols-4 gap-4 p-10">
         {data?.results?.map(
           (movie: { id: number; title: string; poster_path: string }) => {
