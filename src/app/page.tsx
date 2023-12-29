@@ -20,27 +20,25 @@ export default function Home() {
       </button>
     );
   };
-  if(isLoading) return loading();
-  if(isError) return <div>Sorry There was an Error</div>
+  if (isLoading) return loading();
+  if (isError) return <div>Sorry There was an Error</div>;
 
   return (
-    <main>
-      <h1>React Query Movies</h1>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-4 gap-4 place-content-center h-48">
-          {data?.results?.map(
-            (movie: { id: number; title: string; poster_path: string }) => {
-              return (
-                <Card
-                  key={"movie" + movie.id}
-                  title={movie.title}
-                  image={movie.poster_path}
-                ></Card>
-              );
-            }
-          )}
-        </div>
+    <div className="container mx-auto">
+      <h1 className="p-5 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-center font-bold">React Query Movies</h1>
+      <div className="grid grid-cols-4 gap-4 p-10">
+        {data?.results?.map(
+          (movie: { id: number; title: string; poster_path: string }) => {
+            return (
+              <Card
+                key={"movie" + movie.id}
+                title={movie.title}
+                image={movie.poster_path}
+              ></Card>
+            );
+          }
+        )}
       </div>
-    </main>
+    </div>
   );
 }
