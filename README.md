@@ -1,4 +1,4 @@
-![ReactQuery](https://medium.com/@ecarina.gonzalez/react-query-integration-with-next-js-are-you-ready-7433568356f2)
+![ReactQuery](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*cpag_6df8RImb4xws9y6fA.png)
 
 ## Getting Started
 
