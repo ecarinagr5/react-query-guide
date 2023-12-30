@@ -4,7 +4,7 @@ async function getData() {
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNzFhYzM1MWE5ZGY5NDBkMGJlYWEwMTJiNzNmZDQ4MCIsInN1YiI6IjYzNWYzOTg1NDFlZWUxMDA5MTE3YjBkZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sTkiGonoxaEJ_F-kqvVf-BBDefK3353Lr6IGGZuD9U8",
+        "Bearer ...",
     },
   };
 
